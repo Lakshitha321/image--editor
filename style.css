@@ -1,8 +1,142 @@
-@import url('https://fonts.googleapis.com/css?family=poppins:wght@400,500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@400,500,600,700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #969b98;
+}
+
+.container {
+    width: 850px;
+    background: #d4d2d2;
+    border-radius: 10px;
+    padding: 30px 35px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    min-height: 335px;
+}
+
+/* Editor Panel */
+.editor-panel {
+    width: 280px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.editor-panel .title {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.editor-panel .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.editor-panel button {
+    width: 48%;
+    height: 40px;
+    font-size: 14px;
+    color: #6C757D;
+    border-radius: 3px;
+    background: #fff;
+    border: 1px solid #aaa;
+    cursor: pointer;
+}
+
+.editor-panel button:hover {
+    background: #f5f5f5;
+}
+
+.editor-panel .filter button.active {
+    color: #fff;
+    background: #5372F0;
+    border-color: #5372F0;
+}
+
+/* Image Preview */
+.preview-img {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    height: 320px;
+    overflow: hidden;
+}
+
+.preview-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.controls .row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.controls button {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #fff;
+    background: #5372F0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background: #405dcf;
+}
+
+.choose-img {
+    background: #28A745;
+}
+
+.choose-img:hover {
+    background: #218838;
+}
+
+.save-img {
+    background: #DC3545;
+}
+
+.save-img:hover {
+    background: #C82333;
 }
