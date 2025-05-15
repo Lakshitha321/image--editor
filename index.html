@@ -3,38 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ImgChamp</title>
+  <title>ClipChamp</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
 </head>
 <body>
-  <div class="container">
-    <h2>ImgChamp</h2>
+  <div class="theme-toggle">
+    <i class="fa-solid fa-sun"></i>
+  </div>
+  <div class="container disable">
+    <h2>ClipChamp</h2>
     <div class="wrapper">
       <!-- Editor Panel -->
       <div class="editor-panel">
-        <label class="title">Filters</label>
-        <div class="options">
-          <button class="active">Brightness</button>
-          <button>Saturation</button>
-          <button>Inversion</button>
-          <button>Grayscale</button>
-        </div>
-        <div class="slider">
-          <div class="filter-info">
-            <p class="name">Brightness</p>
-            <p class="value">100%</p>
+        <div class="filter">
+          <label class="title">Filters</label>
+          <div class="options">
+            <button id="brightness" class="active">Brightness</button>
+            <button id="saturation">Saturation</button>
+            <button id="inversion">Inversion</button>
+            <button id="grayscale">Grayscale</button>
           </div>
-          <input type="range" value="100" min="0" max="200">
+          <div class="slider">
+            <div class="filter-info">
+              <p class="name">Brightness</p>
+              <p class="value">100%</p>
+            </div>
+            <input type="range" value="100" min="0" max="200">
+          </div>
         </div>
 
-        <label class="title">Rotate and Flip</label>
-        <div class="options">
-          <button><i class="fa-solid fa-rotate-left"></i></button>
-          <button><i class="fa-solid fa-rotate-right"></i></button>
-          <button><i class="bx bx-reflect-vertical"></i></button>
-          <button><i class="bx bx-reflect-horizontal"></i></button>
+        <div class="rotate">
+          <label class="title">Rotate & Flip</label>
+          <div class="options">
+            <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+            <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+            <button id="vertical"><i class="bx bx-reflect-vertical"></i></button>
+            <button id="horizontal"><i class="bx bx-reflect-horizontal"></i></button>
+          </div>
+        </div>
+
+        <div class="adjust">
+          <label class="title">Adjustments</label>
+          <div class="options">
+            <button id="contrast">Contrast</button>
+            <button id="blur">Blur</button>
+            <button id="sepia">Sepia</button>
+            <button id="hue">Hue</button>
+          </div>
         </div>
       </div>
 
@@ -48,10 +65,13 @@
     <div class="controls">
       <button class="reset-filters">Reset Filters</button>
       <div class="row">
+        <input type="file" class="file-input" accept="image/*" hidden>
         <button class="choose-img">Choose Image</button>
         <button class="save-img">Save Image</button>
       </div>
     </div>
   </div>
+  
+  <script src="script.js"></script>
 </body>
 </html>
