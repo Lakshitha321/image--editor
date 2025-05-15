@@ -1,7 +1,7 @@
-# ImgChamp - Browser-based Image Editor
+# ClipChamp - Browser-based Image Editor
 
 ## Introduction
-ImgChamp is a lightweight, powerful browser-based image editing application built with pure HTML, CSS, and JavaScript. It provides users with a range of image manipulation tools without requiring any server-side processing or additional software installations.
+ClipChamp is a lightweight, powerful browser-based image editing application built with pure HTML, CSS, and JavaScript. It provides users with a range of image manipulation tools without requiring any server-side processing or additional software installations.
 
 ## Features
 - **Image Filters**: Apply and adjust brightness, saturation, inversion, and grayscale effects
